@@ -50,6 +50,7 @@ func MaxProfit(prices []int) int {
 	//双层循环，最笨的办法找出最大收益，暴力破解
 	//第二种解法，此动态规划不是直接找解，而是记录每次最小的买入价
 	//dp[i] 表示0...i的最低股票值
+	//那么最大收益=max(0,price[i]-dp[i-1])
 	if len(prices) <= 0 {
 		return 0
 	}
